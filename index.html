@@ -1,60 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adhiparasakthi Engineering College - Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adhiparasakthi Engineering College - Student Login</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    overflow:hidden;
+}
+
+body::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50%;
+    top:-150px;
+    left:-150px;
+}
+
+body::after{
+    content:'';
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(255,255,255,0.05);
+    border-radius:50%;
+    bottom:-150px;
+    right:-100px;
+}
+
+.login-box{
+    position:relative;
+    width:420px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.logo{
+    width:95px;
+    height:95px;
+    border-radius:50%;
+    background:white;
+    padding:8px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+p{
+    color:#d1d5db;
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.input-box{
+    margin:18px 0;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.15);
+    color:white;
+    font-size:15px;
+}
+
+.input-box input::placeholder{
+    color:#ddd;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin-top:18px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#1d4ed8;
+    transform:scale(1.03);
+}
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    margin-top:18px;
+}
+
+.links a{
+    color:white;
+    text-decoration:none;
+    font-size:13px;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+.footer{
+    margin-top:20px;
+    font-size:12px;
+    color:#d1d5db;
+}
+</style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="login-box">
 
-    <div class="login-box">
+    <img src="logo.png" class="logo" alt="Adhiparasakthi Engineering College Logo">
 
-        <img src="logo.png" class="logo">
+    <h2>Adhiparasakthi Engineering College</h2>
+    <p>Student Login Portal</p>
 
-        <h2>ADHIPARASAKTHI ENGINEERING COLLEGE</h2>
+    <form>
 
-        <p>Melmaruvathur</p>
+        <div class="input-box">
+            <input type="text" placeholder="Register Number" required>
+        </div>
 
-        <span>Study | Spirituality | Service</span>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+        </div>
 
-        <h3>LOGIN</h3>
+        <button type="submit">LOGIN</button>
 
-        <form>
+        <div class="links">
+            <a href="#">Forgot Password?</a>
+            <a href="#">Need Help?</a>
+        </div>
 
-            <div class="input-box">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Username">
-            </div>
+    </form>
 
-            <div class="input-box">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password">
-            </div>
-
-            <div class="options">
-
-                <label>
-                    <input type="checkbox">
-                    Remember Me
-                </label>
-
-                <a href="#">Forgot Password?</a>
-
-            </div>
-
-            <button>LOGIN</button>
-
-        </form>
-
+    <div class="footer">
+        © 2026 Adhiparasakthi Engineering College. All Rights Reserved.
     </div>
 
 </div>
